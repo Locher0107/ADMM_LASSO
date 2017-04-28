@@ -1,4 +1,4 @@
-# ADMM_2
+# ADMM_LASSO
 
 
 This is a project that I wrote for application of Google Summer of CODE. However, due to my carelessness, I forget the deadline and fail to submit my project. Just keep it at my Github site.
