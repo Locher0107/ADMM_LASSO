@@ -11,3 +11,20 @@ This is what I do:
 4.Package their implementation and pass R CMD check at MacOS and Windows platform.  
 
 Reades can down load that using command 'r install_github("Locher0107/ADMM_LASSO")'
+
+
+
+```{r}
+library(glmnet)
+library(devtools)
+install_github("Locher0107/ADMM_LASSO")
+library(mustbechecked)
+set.seed(101)
+X <- matrix(rnorm(1000, 4, 3), ncol = 10)
+Y<- rpois(100, 3)
+X_old<-X
+glmPR(X, Y, 0.5, 1)##set lambda=0.5, rho=1
+X<-X_old
+glm(Y ~ X, family = "poisson")
+
+```
